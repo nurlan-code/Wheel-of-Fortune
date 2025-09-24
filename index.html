@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune Casino - Demo Social Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-dharmachakra"></i>
+                <span>Wheel of Fortune</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="games.html" class="nav-link">Games</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-highlight">Wheel of Fortune</span>
+                    <br>Demo Casino Experience
+                </h1>
+                <p class="hero-description">
+                    Experience the thrill of spinning wheels and winning big in our demo social casino. 
+                    No real money, just pure entertainment and excitement!
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary wheel-btn" onclick="spinWheel()">
+                        <i class="fas fa-play"></i>
+                        Spin the Wheel
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToGames()">
+                        <i class="fas fa-gamepad"></i>
+                        Explore Games
+                    </button>
+                </div>
+            </div>
+            <div class="hero-wheel">
+                <div class="wheel-container">
+                    <div class="wheel" id="mainWheel">
+                        <div class="wheel-center">
+                            <div class="wheel-pointer"></div>
+                        </div>
+                        <div class="wheel-segments">
+                            <div class="segment segment-1" data-value="100">100</div>
+                            <div class="segment segment-2" data-value="200">200</div>
+                            <div class="segment segment-3" data-value="500">500</div>
+                            <div class="segment segment-4" data-value="1000">1000</div>
+                            <div class="segment segment-5" data-value="2000">2000</div>
+                            <div class="segment segment-6" data-value="5000">5000</div>
+                            <div class="segment segment-7" data-value="10000">10000</div>
+                            <div class="segment segment-8" data-value="JACKPOT">JACKPOT</div>
+                        </div>
+                    </div>
+                    <div class="wheel-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Demo Casino?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Safe</h3>
+                    <p>No real money involved. Play with virtual coins and enjoy risk-free gaming experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Free Daily Bonuses</h3>
+                    <p>Get free virtual coins every day to keep the fun going without any cost.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Play anywhere, anytime on any device with our responsive design.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Social Gaming</h3>
+                    <p>Connect with friends and compete in tournaments for virtual prizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Preview Section -->
+    <section class="games-preview" id="games">
+        <div class="container">
+            <h2 class="section-title">Popular Demo Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-dharmachakra"></i>
+                    </div>
+                    <h3>Wheel of Fortune</h3>
+                    <p>Spin the wheel and win virtual prizes</p>
+                    <button class="btn-game">Play Demo</button>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-dice"></i>
+                    </div>
+                    <h3>Slot Machines</h3>
+                    <p>Classic slot games with modern graphics</p>
+                    <button class="btn-game">Play Demo</button>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-spade"></i>
+                    </div>
+                    <h3>Card Games</h3>
+                    <p>Poker, Blackjack and more card games</p>
+                    <button class="btn-game">Play Demo</button>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Tournaments</h3>
+                    <p>Compete with other players for prizes</p>
+                    <button class="btn-game">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is this casino free to play?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our casino is completely free to play. We use virtual coins instead of real money, so you can enjoy all the excitement without any financial risk.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I get virtual coins?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You receive free virtual coins daily, and you can earn more by playing games, completing challenges, and participating in tournaments.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I win real money?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, this is a demo casino for entertainment purposes only. All winnings are virtual and cannot be converted to real money.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my personal information safe?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We take privacy seriously and only collect minimal information necessary for gameplay. Your data is encrypted and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wheel of Fortune Casino</h3>
+                    <p>Your premier destination for demo social casino gaming. Play responsibly and enjoy the thrill!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="responsible.html">Responsible Gaming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@wheeloffortune-demo.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Demo Casino Street, Virtual City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wheel of Fortune Demo Casino. All rights reserved. | Demo purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
